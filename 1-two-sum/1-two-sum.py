@@ -8,8 +8,7 @@ class Solution:
             
 
 #         for m in range (0,len(nums)):
-#             for n in range (m+1,len(nums)):
-                
+#             for n in range (m+1,len(nums)):               
 #                 if nums[m]+nums[n]==target:
 #                     return([m,n])                     #O(n**2)
                                           
