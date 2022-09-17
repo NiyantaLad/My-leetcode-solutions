@@ -6,13 +6,13 @@ class Solution:
                 return ([hashmap[target-j],i])
             hashmap[j]=i                                #O(n)
             
-#         o=[]
+
 #         for m in range (0,len(nums)):
 #             for n in range (m+1,len(nums)):
                 
 #                 if nums[m]+nums[n]==target:
-#                     o.extend([m,n]) 
-#         return(o)                                     #O(n**2)
+#                     return([m,n])                     #O(n**2)
+                                          
 
         
         
