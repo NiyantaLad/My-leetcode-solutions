@@ -9,7 +9,7 @@ class Solution(object):
         dict1={}
         for i in nums1:
             # if i not in dict1:
-            # dict1[i]=nums1.count(i)
+            #    dict1[i]=nums1.count(i)
                 if i not in dict1:
                     dict1[i]=1
                 else:
