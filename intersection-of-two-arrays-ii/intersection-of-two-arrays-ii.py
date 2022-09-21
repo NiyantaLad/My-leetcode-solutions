@@ -7,27 +7,27 @@ class Solution(object):
         """
         l=[]
         dict1={}
-        if len(nums2)==len(nums1)==1:
-            return nums1
+        # if len(nums2)==len(nums1)==1:
+        #     return nums1
 
 
-        elif len(nums2)<=len(nums1):
-            for i in nums1:
-                dict1[i]=nums1.count(i)
-            for i in nums2:
-                if i in dict1 and dict1[i]!=0:
-                    dict1[i]-=1
-                    l.append(i)
-            return l
+        # elif len(nums2)<=len(nums1):
+        for i in nums1:
+            dict1[i]=nums1.count(i)
+        for i in nums2:
+            if i in dict1 and dict1[i]!=0:
+                dict1[i]-=1
+                l.append(i)
+        return l
 
-        else: 
-            for i in nums1:
-                dict1[i]=nums1.count(i)
-            for i in nums2:
-                if i in dict1 and dict1[i]!=0:
-                    dict1[i]-=1
-                    l.append(i)
-            return l
+        # else: 
+        #     for i in nums1:
+        #         dict1[i]=nums1.count(i)
+        #     for i in nums2:
+        #         if i in dict1 and dict1[i]!=0:
+        #             dict1[i]-=1
+        #             l.append(i)
+        #     return l
 
         
 
