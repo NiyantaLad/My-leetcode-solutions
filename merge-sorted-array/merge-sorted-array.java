@@ -3,14 +3,11 @@ class Solution {
         int i,j;
         if(m>0 && n>0){
             for ( i=0,j=0;i<nums1.length;i++){
-                
-            
-            if (nums1[i]==0 && n!=0){
-                
-                nums1[i]=nums2[j];
-                j++;
-                n--;
-            }
+                if (nums1[i]==0 && n!=0){
+                    nums1[i]=nums2[j];
+                    j++;
+                    n--;
+                }
             }
             Arrays.sort(nums1);
         }
@@ -22,8 +19,6 @@ class Solution {
                 i++;
                 j++;
             }
-            
         }
     }
-    
 }
