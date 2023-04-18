@@ -11,15 +11,12 @@ class Solution {
                 if( (map.get(nums[i])>maxCount)){
                     majority=nums[i];
                     maxCount=map.get(nums[i]);
-                }
-                                
+                }                                
             }                                      
             else {
                 map.put(nums[i],1);
             }
         }
         return majority;
-    }
-    
-                                      
+    }                                      
 }
