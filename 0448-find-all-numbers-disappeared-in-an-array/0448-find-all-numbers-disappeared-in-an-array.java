@@ -18,7 +18,7 @@ class Solution {
 }
 
 
-        
+//         O(n) time and O(n) extra space
 //         int[] count = new int[nums.length];
 //         for (int i=0; i<nums.length;i++){
 //             count[nums[i]-1]=nums[i];
