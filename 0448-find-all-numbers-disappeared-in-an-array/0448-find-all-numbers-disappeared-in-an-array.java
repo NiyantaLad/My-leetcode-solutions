@@ -1,7 +1,6 @@
 class Solution {
     public List<Integer> findDisappearedNumbers(int[] nums) {
         // without extra space and in O(n) time
-        List<Integer> result = new ArrayList<>();
         for (int i=0; i<nums.length;i++){
             while (nums[i]!=i+1 && nums[i]!= nums[nums[i]-1]){
                 int temp=nums[i];
@@ -9,6 +8,7 @@ class Solution {
                 nums[temp-1]= temp;               
             }
         }
+        List<Integer> result = new ArrayList<>();
         for (int i=0; i<nums.length;i++){
             if (nums[i]!=i+1)
                 result.add(i+1);
