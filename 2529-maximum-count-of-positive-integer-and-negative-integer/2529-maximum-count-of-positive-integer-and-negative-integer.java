@@ -12,7 +12,6 @@ class Solution {
                 r= mid;
         }
         // find 0
-        
         while (l < r) {
           mid = l + (r - l) / 2;
           if (nums[mid] < 0) l = mid + 1;
@@ -27,37 +26,5 @@ class Solution {
         int pos = nums.length - l;
 
         return Math.max(neg, pos);
-        
-        
-        
-//         for (int i =0; i< nums.length;i++){
-//             int mid = (left+right)/2;
-//             if (nums[mid] == 0){
-//                 neg= mid;
-//                 while (nums[mid]>0){
-//                     mid++;
-//                 }
-//                 pos=right-mid;
-//                 return Math.max(neg,pos);
-//             }
-            
-//             else if (nums[mid]>0){
-//                 if(nums[mid+1]>0 && nums[mid-1]<0){
-//                     neg=mid;
-//                     pos=nums.length-neg;
-//                     return Math.max(neg,pos);
-//                 }
-//             }
-//             else if (nums[mid]<0){
-//                 if(nums[mid+1]>0 && nums[mid-1]<0){
-//                 neg=mid+1;
-//                 pos=nums.length-neg;
-//                 return Math.max(neg,pos);
-//                 }
-//                 left=
-//             }
-            
-//         }
-        // return -1;
     }
 }
