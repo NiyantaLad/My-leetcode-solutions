@@ -11,6 +11,8 @@ class Solution {
             builder.append(Integer.toString(map.get(c)));
             builder.append(" ");                        
             }
+        System.out.println(builder);
+        System.out.println(builder.toString());
         return builder.toString();
     }
         
