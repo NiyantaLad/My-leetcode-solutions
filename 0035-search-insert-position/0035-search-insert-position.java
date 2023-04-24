@@ -9,7 +9,7 @@ class Solution {
                 return mid;
             else if (target < nums[mid])
                 right=mid;
-            else if (target > nums[mid])
+            else
                 left=mid+1;
         }
         return right;
