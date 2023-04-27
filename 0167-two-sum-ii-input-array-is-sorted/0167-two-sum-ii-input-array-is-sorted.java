@@ -19,7 +19,6 @@ class Solution {
                 }
             }
         }
-        Arrays.sort(output);
         return (output);
     }
 }
