@@ -1,9 +1,7 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        
         int i=0;
-        int j=nums.length-1;
-        
+        int j=nums.length-1;       
         while(i<j){
             if(nums[i]+nums[j]==target)
                 break;
@@ -13,9 +11,6 @@ class Solution {
                 j--;
         }
         return new int[] {i+1,j+1};
-        
-        
-        
 //         Map <Integer, Integer> map = new HashMap<>();
 //         int[] output = new int[2];
 //         for(int j=0; j<nums.length;j++){
