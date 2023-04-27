@@ -9,8 +9,14 @@ class Solution {
         for(int i=0;i<nums.length;i++){
             int diff = target-nums[i];
             if(map.containsKey(diff) && map.get(diff)!=i){
-                output[0]=i+1;
-                output[1]=map.get(diff)+1;
+                if((i+1)<(map.get(diff)+1)){
+                    output[0]=i+1;
+                    output[1]=map.get(diff)+1;
+                }
+                else{
+                    output[1]=i+1;
+                    output[0]=map.get(diff)+1;
+                }
             }
         }
         Arrays.sort(output);
