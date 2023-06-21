@@ -14,8 +14,8 @@ class Solution {
         }
         StringBuilder result = new StringBuilder();
         for(int k=0; k<strArr.length;k++){
-            result.append(strArr[k]+" ");
-            // result.append(" ");
+            result.append(strArr[k]);
+            result.append(" ");
         }
         return result.toString().trim();
     }
