@@ -4,9 +4,8 @@ class Solution {
         String[] strArr = s.split(" ");       
         int i=0;
         int j= strArr.length-1;
-        String temp ="";
         while(i<j){
-                temp = strArr[i];
+                String temp = strArr[i];
                 strArr[i]=strArr[j];
                 strArr[j]=temp;
                 i++;
