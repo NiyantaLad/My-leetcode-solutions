@@ -8,7 +8,7 @@ class Solution {
                 min1=nums[i];
             else if(nums[i]<=min2)
                 min2=nums[i];
-            else if(nums[i]>min2)
+            else
                 return true;
         }
         return false;
