@@ -1,8 +1,8 @@
 class Solution {
     public int maxOperations(int[] nums, int k) {
         //using two pointers
-        // Time: O(nlogn)
-        // Space: O(1)
+        //Time: O(nlogn)
+        //Space: O(1)
         Arrays.sort(nums);
         int result = 0, i =0, j= nums.length -1;
         while(i<j)
