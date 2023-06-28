@@ -1,14 +1,7 @@
  class Solution {
      public boolean buddyStrings(String A, String B) {
         if (A.length() != B.length()) return false;
-        // if (A.equals(B)) {
-        //     Set<Character> s = new HashSet<Character>();
-        //     for (char c : A.toCharArray())
-        //         s.add(c);
-        //     return s.size() < A.length();
-        // }
-         
-         if (A.equals(B)) {
+        if (A.equals(B)) {
             Set<Character> set = new HashSet<Character>();
             for (int i = 0; i < A.length(); i++) {
                 if (set.contains(A.charAt(i)))
