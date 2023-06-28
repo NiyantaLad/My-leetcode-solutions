@@ -12,30 +12,27 @@
             return false;
         }
          
-         int firstIndex = -1;
-        int secondIndex = -1;
+        int idx1 = -1;
+        int idx2 = -1;
 
         for (int i = 0; i < A.length(); ++i) {
             if (A.charAt(i) != B.charAt(i)) {
-                if (firstIndex == -1) {
-                    firstIndex = i;
-                } else if (secondIndex == -1) {
-                    secondIndex = i;
+                if (idx1 == -1) {
+                    idx1 = i;
+                } else if (idx2 == -1) {
+                    idx2 = i;
                 } else {
                     return false;
                 }
             }
         }
 
-        if (secondIndex == -1) {
+        if (idx2 == -1) {
             return false;
         }
 
-        return A.charAt(firstIndex) == B.charAt(secondIndex) && 
-               A.charAt(secondIndex) == B.charAt(firstIndex);
-     
-         
-
+        return A.charAt(idx1) == B.charAt(idx2) && 
+               A.charAt(idx2) == B.charAt(idx1);
 
         // List<Integer> dif = new ArrayList<>();
         // for (int i = 0; i < A.length(); ++i) {
