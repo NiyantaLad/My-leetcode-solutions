@@ -14,11 +14,7 @@ class Solution {
         for (int i = 0; i < j; i++) {
             sb.append(ch[i]);
         }
-        // int i=0;
-        // while(i<j){
-        //     sb.append(ch[i]);
-        //     i++;
-        // }
+
        return sb.toString();
     }
 }
