@@ -10,9 +10,11 @@ class Solution {
         }
         
         String output="";
-        Iterator <Character> it = stack.iterator();
-        while(it.hasNext())
-            output+= it.next().toString();
-        return output;
+        StringBuilder sb = new StringBuilder();
+        while(!stack.isEmpty()){
+            sb.append(stack.pop());
+        }
+        sb.reverse();
+        return sb.toString();
     }
 }
