@@ -1,6 +1,6 @@
 class Solution {
     public int[] asteroidCollision(int[] asteroids) {
-        int max=0;
+        
         Stack<Integer> stack = new Stack<>();
         
         for (int asteroid : asteroids) {
@@ -30,7 +30,6 @@ class Solution {
             
         }
         
-        System.out.println(stack);
         int[] result = new int[stack.size()];
         for(int i=result.length-1;i>=0;i--){
             result[i]=stack.pop();
