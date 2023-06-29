@@ -14,7 +14,6 @@ class Solution {
         while(!stack.isEmpty()){
             sb.append(stack.pop());
         }
-        sb.reverse();
-        return sb.toString();
+        return sb.reverse().toString();
     }
 }
