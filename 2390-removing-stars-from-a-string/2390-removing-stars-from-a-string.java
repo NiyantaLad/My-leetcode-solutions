@@ -11,11 +11,14 @@ class Solution {
         }
         
         StringBuilder sb = new StringBuilder();
-        int i=0;
-        while(i<j){
+        for (int i = 0; i < j; i++) {
             sb.append(ch[i]);
-            i++;
         }
+        // int i=0;
+        // while(i<j){
+        //     sb.append(ch[i]);
+        //     i++;
+        // }
        return sb.toString();
     }
 }
