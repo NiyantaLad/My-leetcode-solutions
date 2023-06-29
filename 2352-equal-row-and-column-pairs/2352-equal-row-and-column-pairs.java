@@ -1,28 +1,24 @@
 class Solution {
     public int equalPairs(int[][] grid) {
-        Map<Integer, List<Integer>> rowMap= new HashMap<>();
-        Map<Integer, List<Integer>> colMap= new HashMap<>(); 
-        
-        for(int i=0;i<grid.length;i++){
-            List<Integer> rowVal = new ArrayList<>();
-            List<Integer> colVal = new ArrayList<>();
-            for(int j=0;j<grid.length;j++){
-                rowVal.add(grid[i][j]);
-                colVal.add(grid[j][i]);  
-            }
-            rowMap.put(i,rowVal);
-            colMap.put(i,colVal);
-            // System.out.println(rowVal);
-            // System.out.println(colVal);
+        int count = 0;
+        int n = grid.length;
+
+        // Keep track of the frequency of each row.
+        Map<String, Integer> rowCounter = new HashMap<>();
+        for (int[] row : grid) {
+            String rowString = Arrays.toString(row);
+            rowCounter.put(rowString, 1 + rowCounter.getOrDefault(rowString, 0));
         }
-        int ct=0;
-        for(int i=0;i<grid.length;i++){
-            for(int j=0;j<grid.length;j++){
-                if(rowMap.get(i).equals(colMap.get(j)))
-                    ct++;
+
+        // Add up the frequency of each column in map.
+        for (int c = 0; c < n; c++) {
+            int[] colArray = new int[n];
+            for (int r = 0; r < n; ++r) {
+                colArray[r] = grid[r][c];
             }
+            count += rowCounter.getOrDefault(Arrays.toString(colArray), 0);
         }
-         return ct;
+
+        return count;
     }
-    
 }
