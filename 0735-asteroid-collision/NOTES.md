@@ -1,36 +1,20 @@
-class Solution {
-public int[] asteroidCollision(int[] asteroids) {
-int max=0;
-Stack<Integer> stack = new Stack<>();
-for(int i=0; i<asteroids.length;i++){
-if(!stack.isEmpty()){
-if(asteroids[i]<0){
-if(stack.peek()<0) {
-stack.push(asteroids[i]);
 }
-else if(Math.abs(asteroids[i])!=stack.peek())
-{
-max=Math.max(Math.abs(asteroids[i]),stack.pop());
-// while(stack.pop()>max )
-if(max==Math.abs(asteroids[i]) && stack.peek()<0)
-stack.push(asteroids[i]);
-else if(max==Math.abs(asteroids[i]))
-stack.push(Math.max(Math.abs(asteroids[i]),stack.pop()));
-else
-stack.push(max);
-}
-else
+// If both asteroids have the same size, then both asteroids will explode.
+// Pop the asteroid from the stack; also, we won't push the current asteroid to the stack.
+else if (Math.abs(stack.peek()) == Math.abs(asteroid)) {
 stack.pop();
 }
-else{
-stack.push(asteroids[i]);
+​
+// If we reach here, the current asteroid will be destroyed
+// Hence, we should not add it to the stack
+flag = false;
+break;
+}
+​
+if (flag) {
+stack.push(asteroid);
 }
 }
-else{
-stack.push(asteroids[i]);
-}
-}
-System.out.println(stack);
 int[] result = new int[stack.size()];
 for(int i=result.length-1;i>=0;i--){
 result[i]=stack.pop();
