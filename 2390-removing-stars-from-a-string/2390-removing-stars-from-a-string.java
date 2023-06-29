@@ -3,10 +3,11 @@ class Solution {
         char[] ch = new char[s.length()];
         int j=0;
         for(int i=0;i<s.length();i++){
-            if(s.charAt(i)=='*')
+            char c= s.charAt(i);
+            if(c=='*')
                 j--;
             else
-                ch[j++]=s.charAt(i);
+                ch[j++]=c;
         }
         
         StringBuilder sb = new StringBuilder();
