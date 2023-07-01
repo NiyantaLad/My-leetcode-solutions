@@ -15,14 +15,12 @@
  */
 class Solution {
     private List<List<Integer>> totalPaths = new ArrayList<>();
-    private int sum;
     Stack<Integer> path = new Stack<>();
     
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
         if(root==null)
             return totalPaths;
         path.push(root.val);
-        // System.out.println(path);
         if(root.left==null && root.right==null && targetSum-root.val==0){
             
             totalPaths.add(new ArrayList<Integer>(path));
