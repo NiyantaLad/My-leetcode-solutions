@@ -15,25 +15,30 @@
  */
 class Solution {
     
+   public boolean isSameTree(TreeNode p, TreeNode q) {
+    // base case
+    if(p==null || q==null) return p==null && q==null;
+    // recursion
+    return p.val==q.val && isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+} 
     
-    
-    public List<Integer> dfs(TreeNode node, List<Integer> list){
-        if(node==null){
+//     public List<Integer> dfs(TreeNode node, List<Integer> list){
+//         if(node==null){
             
-            list.add(null);
-            return list;
-        }
-        list.add(node.val);
-        dfs(node.left,list);
-        dfs(node.right,list);
-        return list;
-    }
+//             list.add(null);
+//             return list;
+//         }
+//         list.add(node.val);
+//         dfs(node.left,list);
+//         dfs(node.right,list);
+//         return list;
+//     }
     
-    public boolean isSameTree(TreeNode p, TreeNode q) {
-        List<Integer> plist = new ArrayList<>();
-        List<Integer> qlist = new ArrayList<>();
-        plist=dfs(p,plist);
-        qlist=dfs(q,qlist);
-        return (plist.equals(qlist));
-    }
+//     public boolean isSameTree(TreeNode p, TreeNode q) {
+//         List<Integer> plist = new ArrayList<>();
+//         List<Integer> qlist = new ArrayList<>();
+//         plist=dfs(p,plist);
+//         qlist=dfs(q,qlist);
+//         return (plist.equals(qlist));
+//     }
 }
